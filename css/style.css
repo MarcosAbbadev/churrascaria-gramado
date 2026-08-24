@@ -125,7 +125,122 @@ nav ul a:hover {
     color: var(--color-secondary);
 }
 
+.logo {
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* =========================
+   HERO
+   ========================= */
+
+#inicio {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    background-image:
+        linear-gradient(
+            rgba(43, 33, 28, 0.80),
+            rgba(43, 33, 28, 0.80)
+        ),
+        url("../assets/images/restaurant/banner-generico.jpg");
+
+    background-size: cover;
+    background-position: 0% center;
+
+    color: var(--color-surface);
+}
+
+#inicio .container {
+    width: min(94%, 1400px);
+    padding: 80px 0;
+}
+
+#inicio h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1.05;
+    margin: 16px 0;
+}
+
+#inicio p {
+    max-width: 650px;
+}
+
+.hero-tagline {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.hero-description {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.1rem;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 32px;
+}
+
+.hero-actions a {
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    border: 1px solid var(--color-surface);
+    border-radius: 6px;
+
+    color: var(--color-surface);
+
+    font-weight: 600;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.hero-actions a:hover {
+    background-color: var(--color-surface);
+    color: var(--color-primary);
+
+    transform: translateY(-2px);
+}
+
+.hero-primary {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary) !important;
+}
+
+.hero-primary:hover {
+    background-color: var(--color-surface);
+    color: var(--color-primary);
+}
+
+.hero-location {
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.08px;
+    text-transform: uppercase;
+}
+
+.hero hours {
+    margin-top: 24px;
+    font-weight: 600;
+}
+
+/* =========================
+   RESPONSIVIDADE
+   ========================= */
+
 @media (max-width: 768px) {
+
     nav .container {
         flex-direction: column;
         gap: 16px;
@@ -137,11 +252,18 @@ nav ul a:hover {
         justify-content: center;
         gap: 12px 18px;
     }
-}
 
-.logo {
-    color: var(--color-primary);
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
-    font-weight: bold;
+    #inicio .container {
+        width: 90%;
+        padding: 64px 0;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-actions a {
+        text-align: center;
+    }
 }
