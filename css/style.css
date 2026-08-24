@@ -378,6 +378,64 @@ nav ul a:hover {
 }
 
 /* =========================
+   SOBRE
+   ========================= */
+
+#sobre {
+    padding: 100px 0;
+    background-color: var(--color-background);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.about-image {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.about-image img {
+    display: block;
+
+    width: 100%;
+    height: 500px;
+
+    object-fit: cover;
+}
+
+.about-content {
+    max-width: 600px;
+}
+
+.section-label {
+    margin-bottom: 8px;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: var(--color-secondary);
+}
+
+.about-content h2 {
+    margin-bottom: 24px;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+}
+
+.about-content p:not(.section-label) {
+    margin-bottom: 16px;
+    line-height: 1.7;
+}
+
+/* =========================
    RESPONSIVIDADE
    ========================= */
 
@@ -429,5 +487,22 @@ nav ul a:hover {
     .location-map,
     .location-map iframe {
         min-height: 350px;
+    }
+
+    #sobre {
+    padding: 72px 0;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-image img {
+        height: 350px;
+    }
+
+    .about-content {
+        max-width: none;
     }
 }
