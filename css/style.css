@@ -1,0 +1,147 @@
+/* =========================
+   RESET
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* =========================
+   VARIABLES
+   ========================= */
+
+:root {
+    --color-primary: #6B3E26;
+    --color-primary-dark: #4A291A;
+
+    --color-secondary: #C47A3C;
+
+    --color-background: #F8F4EF;
+    --color-surface: #FFFFFF;
+
+    --color-text: #2B211C;
+    --color-text-light: #6F625A;
+
+    --color-border: #E4DCD5;
+
+    --font-heading: Georgia, serif;
+    --font-body: Arial, sans-serif;
+}
+
+
+/* =========================
+   TYPOGRAPHY
+   ========================= */
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+}
+
+/* =========================
+   LAYOUT
+   ========================= */
+
+.container {
+    width: min(90%, 1200px);
+    margin-inline: auto;
+}
+
+/* =========================
+   NAVBAR
+   ========================= */
+
+header {
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+}
+
+nav .container {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-whatsapp {
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+
+    padding: 10px 18px;
+    border-radius: 6px;
+
+    transition: background-color 0.2s ease;
+}
+
+.nav-whatsapp:hover {
+    background-color: var(--color-primary-dark);
+}
+
+nav ul a {
+    color: var(--color-text);
+    font-size: 0,95rem;
+    transition: color 0.2s ease;
+}
+
+nav ul a:hover {
+    color: var(--color-secondary);
+}
+
+@media (max-width: 768px) {
+    nav .container {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px 0;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 18px;
+    }
+}
+
+.logo {
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
