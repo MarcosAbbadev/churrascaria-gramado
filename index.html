@@ -8,14 +8,30 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
+    <header class="site-header">
         <nav>
-            <div class="container">
+            <div class="container nav-container">
                 <a class="logo" href="#inicio">
-                    Churrascaria Gramado
+                    <img src="assets/images/logo/logo-gramado-transparente.png" alt="">
+                    <span class="logo-wordmark" aria-label="Churrascaria Gramado">
+                        <span class="logo-wordmark-main">CHURRASCARIA</span>
+                        <span class="logo-wordmark-sub">GRAMADO</span>
+                    </span>
                 </a>
 
-                <ul>
+                <button
+                    class="nav-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="main-navigation"
+                >
+                    <span class="sr-only">Abrir menu</span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul id="main-navigation">
                     <li><a href="#inicio">Início</a></li>
                     <li><a href="#contato">Contato</a></li>
                     <li><a href="#localizacao">Localização</a></li>
@@ -28,7 +44,11 @@
                     class="nav-whatsapp"
                     href="https://wa.me/5512997127622?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20restaurante!"
                 >
-                    WhatsApp
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path d="M20 11.5a8 8 0 0 1-8 8 7.9 7.9 0 0 1-3.8-1l-4.2 1.1 1.1-4.1A8 8 0 1 1 20 11.5Z" />
+                        <path d="M8.5 12h.01M12 12h.01M15.5 12h.01" />
+                    </svg>
+                    Fale Conosco
                 </a>
             </div>
         </nav>
@@ -38,7 +58,9 @@
 
         <section id="inicio">
             <div class="container">
+                <canvas class="hero-sparks" aria-hidden="true"></canvas>
                 <p class="hero-location">Rodovia Presidente Dutra • Jacareí - SP</p>
+                <p class="hero-heritage">40 anos de história</p>
 
                 <h1>Churrascaria Gramado</h1>
 
@@ -56,7 +78,7 @@
                         class="hero-primary"
                         href="https://wa.me/5512997127622?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20restaurante!"
                     >
-                        Falar pelo WhatsApp
+                        WhatsApp
                     </a>
 
                     <a href="#sobre">
@@ -77,12 +99,22 @@
                     <p>Contato</p>
 
                     <h2>Fale com a Churrascaria Gramado</h2>
+                    <p class="contact-intro">
+                        Escolha a melhor forma de falar com a gente.
+                    </p>
                 </div>
 
                 <div class="contact-grid">
 
                     <article class="contact-card">
-                        <h3>Telefone</h3>
+                        <h3>
+                            <span class="contact-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" focusable="false">
+                                    <path d="M5 4.5 8.2 3l2.1 4.3-2 1.5a13.2 13.2 0 0 0 6.9 6.9l1.5-2 4.3 2.1-1.5 3.2c-.4.9-1.4 1.4-2.4 1.2C10.1 19.1 4.9 13.9 3.8 7c-.2-1 .3-2 1.2-2.5Z" />
+                                </svg>
+                            </span>
+                            Telefone
+                        </h3>
 
                         <p>(12) 3951-1580</p>
 
@@ -92,7 +124,15 @@
                     </article>
 
                     <article class="contact-card">
-                        <h3>WhatsApp</h3>
+                        <h3>
+                            <span class="contact-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" focusable="false">
+                                    <path d="M20 11.5a8 8 0 0 1-8 8 7.9 7.9 0 0 1-3.8-1L4 19.6l1.1-4.1A8 8 0 1 1 20 11.5Z" />
+                                    <path d="M8.5 12h.01M12 12h.01M15.5 12h.01" />
+                                </svg>
+                            </span>
+                            WhatsApp
+                        </h3>
 
                         <p>(12) 99712-7622</p>
 
@@ -104,7 +144,9 @@
                     </article>
 
                     <article class="contact-card">
-                        <h3>Redes sociais</h3>
+                        <h3>
+                            Redes sociais
+                        </h3>
 
                         <div class="social-links">
                             <a
@@ -112,6 +154,13 @@
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
+                                <span class="social-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" focusable="false">
+                                        <path d="M7 3.8h10A3.2 3.2 0 0 1 20.2 7v10a3.2 3.2 0 0 1-3.2 3.2H7A3.2 3.2 0 0 1 3.8 17V7A3.2 3.2 0 0 1 7 3.8Z" />
+                                        <circle cx="12" cy="12" r="3.5" />
+                                        <circle cx="17.2" cy="6.9" r=".8" fill="currentColor" stroke="none" />
+                                    </svg>
+                                </span>
                                 Instagram
                             </a>
 
@@ -120,12 +169,18 @@
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
+                                <span class="social-icon social-icon-facebook" aria-hidden="true">f</span>
                                 Facebook
                             </a>
                         </div>
                     </article>
 
                 </div>
+
+                <!-- <a class="contact-location-link" href="#localizacao">
+                    Ver localização e horário
+                    <span aria-hidden="true">→</span>
+                </a> -->
 
             </div>
         </section>
@@ -295,7 +350,16 @@
                 <div class="service-grid">
 
                     <article class="service-card">
-                        <h3>Refeição no local</h3>
+                        <h3>
+                            <span class="service-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" focusable="false">
+                                    <circle cx="12" cy="12" r="5.8" />
+                                    <circle cx="12" cy="12" r="3.4" />
+                                    <path d="M4 4v7M6 4v7M5 4v16M4 8h2M19 4v16M19 4c-2 1.6-2 4.4 0 6" />
+                                </svg>
+                            </span>
+                            Refeição no local
+                        </h3>
 
                         <p>
                             Sente-se, aproveite o ambiente e faça sua refeição
@@ -304,7 +368,15 @@
                     </article>
 
                     <article class="service-card">
-                        <h3>Retirada na porta</h3>
+                        <h3>
+                            <span class="service-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" focusable="false">
+                                    <path d="M6 8h12l1 12H5L6 8Z" />
+                                    <path d="M9 8V6a3 3 0 0 1 6 0v2" />
+                                </svg>
+                            </span>
+                            Retirada na porta
+                        </h3>
 
                         <p>
                             Está com pressa para continuar a viagem?
@@ -313,7 +385,14 @@
                     </article>
 
                     <article class="service-card">
-                        <h3>Não realizamos entregas</h3>
+                        <h3>
+                            <span class="service-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" focusable="false">
+                                    <path d="M4 7h11v10H4zM15 10h3l2 3v4h-5M7 17a1.7 1.7 0 1 0 3.4 0M16 17a1.7 1.7 0 1 0 3.4 0M4 4l16 16" />
+                                </svg>
+                            </span>
+                            Não realizamos entregas
+                        </h3>
 
                         <p>
                             Atualmente não oferecemos serviço de entrega.
@@ -326,97 +405,142 @@
         </section>
 
         <section id="galeria">
-            <p>Galeria</p>
+            <div class="container">
 
-            <h2>Conheça a Churrascaria Gramado</h2>
+                <div class="section-header">
+                    <p>Galeria</p>
 
-            <p>
-                Um pouco do nosso ambiente, da nossa comida e dos momentos
-                que fazem parte da experiência na Gramado.
-            </p>
+                    <h2>Conheça a Churrascaria Gramado</h2>
 
-            <div>
-                <!-- As imagens serão adicionadas posteriormente -->
+                    <p>
+                        Um pouco do ambiente e da experiência que você encontra
+                        durante sua parada.
+                    </p>
+                </div>
+
+                <div class="gallery-grid">
+
+                    <figure class="gallery-item">
+                        <img
+                            src="assets/images/restaurant/about-image-generic.jpg"
+                            alt="Ambiente da Churrascaria Gramado"
+                            loading="lazy"
+                        >
+                    </figure>
+
+                    <!--
+                    Outras imagens serão adicionadas aqui.
+                    -->
+
+                </div>
+
             </div>
         </section>
     </main>
     <footer>
-        <div>
-            <img
-                src="assets/images/logo/logo-gramado.png"
-                alt="Logo da Churrascaria Gramado"
-            >
+        <div class="container">
 
-            <p>CHURRASCARIA GRAMADO</p>
+            <div class="footer-grid">
 
-            <p>Uma boa parada faz parte da viagem.</p>
-        </div>
+                <div class="footer-brand">
 
-        <div>
-            <h2>Redes sociais</h2>
+                    <img
+                        src="assets/images/logo/logo-gramado-transparente.png"
+                        alt="Logo da Churrascaria Gramado"
+                    >
 
-            <a
-                href="https://www.instagram.com/gramado_jacarei/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Instagram
-            </a>
+                    <p class="footer-name">
+                        CHURRASCARIA GRAMADO
+                    </p>
 
-            <a
-                href="https://www.facebook.com/gramadojacarey"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Facebook
-            </a>
+                    <p>
+                        Uma boa parada faz parte da viagem.
+                    </p>
 
-            <a
-                href="https://wa.me/5512997127622?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20restaurante!"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                WhatsApp
-            </a>
-        </div>
+                    <div class="footer-social">
+                        <a
+                            href="https://www.instagram.com/gramado_jacarei/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Instagram
+                        </a>
 
-        <div>
-            <h2>Navegação</h2>
+                        <a
+                            href="https://www.facebook.com/gramadojacarey"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Facebook
+                        </a>
 
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <li><a href="#localizacao">Localização</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#experiencia">Experiência</a></li>
-                <li><a href="#galeria">Galeria</a></li>
-            </ul>
-        </div>
+                        <a
+                            href="https://wa.me/5512997127622?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20restaurante!"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            WhatsApp
+                        </a>
+                    </div>
 
-        <div>
-            <address>
-                Rod. Pres. Dutra, KM 159 - Parque Meia Lua<br>
-                Jacareí - SP
-            </address>
+                </div>
 
-            <a href="tel:+551239511580">
-                (12) 3951-1580
-            </a>
 
-            <p>
-                Todos os dias • 06:30 às 22:00
-            </p>
-        </div>
+                <div class="footer-navigation">
 
-        <div>
-            <p>
-                Refeição no local • Retirada na porta • Não realizamos entregas
-            </p>
+                    <h3>Navegação</h3>
 
-            <p>
-                © 2026 Churrascaria Gramado. Todos os direitos reservados.
-            </p>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="#localizacao">Localização</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#experiencia">Experiência</a></li>
+                        <li><a href="#galeria">Galeria</a></li>
+                    </ul>
+
+                </div>
+
+
+                <div class="footer-contact">
+
+                    <h3>Contato</h3>
+
+                    <address>
+                        Rod. Pres. Dutra, KM 159 - Parque Meia Lua<br>
+                        Jacareí - SP<br>
+                        CEP 12335-010
+                    </address>
+
+                    <a href="tel:+551239511580">
+                        (12) 3951-1580
+                    </a>
+
+                    <p>
+                        Todos os dias • 06:30 às 22:00
+                    </p>
+
+                    <p>
+                        Refeição no local • Retirada na porta
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Churrascaria Gramado.
+                    Todos os direitos reservados.
+                </p>
+
+            </div>
+
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
